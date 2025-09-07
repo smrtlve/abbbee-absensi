@@ -90,3 +90,8 @@ document.getElementById('csvBtn').addEventListener('click', ()=>{
 
 // Print (PDF)
 document.getElementById('printBtn').addEventListener('click', ()=>window.print());
+
+document.getElementById('qrBtn').addEventListener('click', ()=>{
+  alert('Fitur QR Scanner disiapkan. Akan aktif setelah koneksi ke Firebase.');
+});
+
