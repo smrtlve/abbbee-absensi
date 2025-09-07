@@ -48,3 +48,17 @@ tfoot td{font-weight:700;background:#fff}
   .tools{flex-direction:column}
   .wrap{padding:12px}
 }
+
+.btn, button {
+  transition: all .2s ease;
+  cursor: pointer;
+}
+.btn:hover, button:hover {
+  background: #2c82c9; /* lebih gelap */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.btn.outline:hover {
+  background: var(--primary);
+  color:#fff;
+}
