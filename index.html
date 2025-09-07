@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Absensi Siswa - BimbelBee</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ABBee — Absensi BimbelBee</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <h1>📚 Absensi Siswa</h1>
-  <p>Silakan scan QR Code untuk melakukan absensi.</p>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="brand">📚 ABBee — Absensi BimbelBee</h1>
+      <p class="lead">Sistem absensi sederhana via QR — Guru & Wali</p>
+    </div>
+  </header>
 
-  <div class="scan-box">
-    <input type="text" id="studentId" placeholder="Masukkan ID Siswa (dummy)">
-    <button onclick="markAttendance()">Absen Sekarang</button>
-  </div>
+  <main class="wrap main-grid">
+    <section class="card">
+      <h2>Masuk sebagai Guru / Admin</h2>
+      <p>Akses panel guru: CRUD siswa, scan QR, laporan.</p>
+      <a class="btn" href="guru.html">Masuk ke Panel Guru</a>
+    </section>
 
-  <p id="status"></p>
+    <section class="card">
+      <h2>Untuk Wali Murid</h2>
+      <p>Lihat laporan kehadiran anak tanpa login.</p>
+      <a class="btn outline" href="wali.html">Buka Halaman Wali</a>
+    </section>
 
-  <script src="script.js"></script>
+    <section class="card full">
+      <h2>Petunjuk Singkat</h2>
+      <ul>
+        <li>Upload halaman ini ke GitHub Pages di repo <code>abbbee-absensi</code>.</li>
+        <li>Untuk backend / data nanti, kita integrasikan Firebase.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <small>Alpha — ABBee Project • Frontend Mockup Final</small>
+  </footer>
 </body>
 </html>
