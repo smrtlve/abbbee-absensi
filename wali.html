@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daftar Kehadiran - BimbelBee</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ABBee — Wali Murid (F-03)</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <h1>👨‍🏫 Daftar Kehadiran</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nama</th>
-        <th>Waktu</th>
-      </tr>
-    </thead>
-    <tbody id="attendance-list">
-      <!-- Dummy data sementara -->
-      <tr>
-        <td>S001</td>
-        <td>Budi</td>
-        <td>07-09-2025 10:00</td>
-      </tr>
-      <tr>
-        <td>S002</td>
-        <td>Siti</td>
-        <td>07-09-2025 10:05</td>
-      </tr>
-    </tbody>
-  </table>
+  <header class="site-header"><div class="wrap"><h1 class="brand">📚 ABBee — Wali Murid</h1></div></header>
 
-  <script src="script.js"></script>
+  <main class="wrap">
+    <div class="card">
+      <h2>Laporan Kehadiran Anak</h2>
+
+      <div class="tools" style="margin-top:12px;">
+        <div class="search-box">
+          <input id="searchInputW" placeholder="Cari nama atau ID siswa...">
+          <div class="suggestions" id="suggestionsW"></div>
+        </div>
+
+        <div class="filter-box">
+          <select id="monthFilterW">
+            <option value="">Bulan</option>
+            <option value="01">Januari</option><option value="02">Februari</option><option value="03">Maret</option>
+            <option value="04">April</option><option value="05">Mei</option><option value="06">Juni</option>
+            <option value="07">Juli</option><option value="08">Agustus</option><option value="09">September</option>
+            <option value="10">Oktober</option><option value="11">November</option><option value="12">Desember</option>
+          </select>
+        </div>
+
+        <div class="filter-box">
+          <select id="yearFilterW">
+            <option value="">Tahun</option>
+            <option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option>
+          </select>
+        </div>
+
+        <div class="export-box">
+          <button id="printBtnW">📄 PDF</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table id="reportTableW">
+          <thead>
+            <tr><th>Nama</th><th>Jenjang</th><th>Hadir</th><th>Tgl Hadir</th><th>Jam Hadir</th><th>Total Bayar</th></tr>
+          </thead>
+          <tbody id="tableBodyW"></tbody>
+          <tfoot><tr><td colspan="5">Total Akumulasi Bulan</td><td id="totalSumW">Rp 0</td></tr></tfoot>
+        </table>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="assets/wali.js"></script>
 </body>
 </html>
