@@ -1,1 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absensi Siswa - BimbelBee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📚 Absensi Siswa</h1>
+  <p>Silakan scan QR Code untuk melakukan absensi.</p>
 
+  <div class="scan-box">
+    <input type="text" id="studentId" placeholder="Masukkan ID Siswa (dummy)">
+    <button onclick="markAttendance()">Absen Sekarang</button>
+  </div>
+
+  <p id="status"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
