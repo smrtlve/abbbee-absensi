@@ -14,38 +14,34 @@
       <h2>Panel Guru</h2>
       <p>👩‍🏫 Anda login sebagai Guru. CRUD siswa, scan QR, dan laporan.</p>
 
-      <div class="export-box">
-        <button id="qrBtn">📷 Scan QR</button>
-      </div>
-
-      <div class="tools" style="margin-top:12px;">
-        <div class="search-box">
-          <input id="searchInput" placeholder="Cari nama atau ID siswa...">
-          <div class="suggestions" id="suggestions"></div>
-        </div>
-
-        <div class="filter-box">
-          <select id="monthFilter">
-            <option value="">Bulan</option>
-            <option value="01">Januari</option><option value="02">Februari</option><option value="03">Maret</option>
-            <option value="04">April</option><option value="05">Mei</option><option value="06">Juni</option>
-            <option value="07">Juli</option><option value="08">Agustus</option><option value="09">September</option>
-            <option value="10">Oktober</option><option value="11">November</option><option value="12">Desember</option>
-          </select>
-        </div>
-
-        <div class="filter-box">
-          <select id="yearFilter">
-            <option value="">Tahun</option>
-            <option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option>
-          </select>
-        </div>
-
-        <div class="export-box" style="display:flex;gap:8px;min-width:220px;">
-          <button id="printBtn">📄 PDF</button>
-          <button id="csvBtn">📊 Excel</button>
-        </div>
-      </div>
+      <div class="tools">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Cari nama atau ID siswa...">
+    <div class="suggestions" id="suggestions"></div>
+  </div>
+  <div class="filter-box">
+    <select id="monthFilter">
+      <option value="">Bulan</option>
+      <option value="01">Januari</option><option value="02">Februari</option><option value="03">Maret</option>
+      <option value="04">April</option><option value="05">Mei</option><option value="06">Juni</option>
+      <option value="07">Juli</option><option value="08">Agustus</option><option value="09">September</option>
+      <option value="10">Oktober</option><option value="11">November</option><option value="12">Desember</option>
+    </select>
+  </div>
+  <div class="filter-box">
+    <select id="yearFilter">
+      <option value="">Tahun</option>
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+      <option value="2026">2026</option>
+    </select>
+  </div>
+  <div class="export-box">
+    <button id="qrBtn">📷 Scan QR</button>
+    <button class="danger" onclick="window.print()">📄 PDF</button>
+    <button class="excel" onclick="alert('Export Excel dummy')">📊 Excel</button>
+  </div>
+</div>
 
       <div class="table-wrap">
         <table id="reportTable">
